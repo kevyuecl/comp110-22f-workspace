@@ -13,7 +13,7 @@ def contains_char (secret_word: str, secret_chr: str) -> bool:
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
-#Initialization of f-strings with respect to their box colors 
+#Initialization of f-strings with respect to their box colors
 def emojified (guess_secret: str, secret: str) -> str:
     assert len(guess_secret) == len(secret)
     index: int = 0 #Initialize index to 0 
