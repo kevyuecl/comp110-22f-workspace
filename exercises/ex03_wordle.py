@@ -1,7 +1,9 @@
 """EX03- Sturcutred Wordle."""
 __author__ = "730559522"
+
+
 def contains_char(secret_word: str, secret_chr: str) -> bool:
-    """Searches for present characters for strings of any length"""
+    """Searches for present characters for strings of any length."""
     assert len(secret_chr) == 1
     index: int = 0  # Initialize index to 0
     while (index < len(secret_word)):
@@ -18,6 +20,7 @@ GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 # Initialization of f-strings with respect to their box colors 
 
+
 def emojified(guess_secret: str, secret: str) -> str:
     """Returns emoji strings based on guess accuracy."""
     assert len(guess_secret) == len(secret)
@@ -27,7 +30,7 @@ def emojified(guess_secret: str, secret: str) -> str:
         if (guess_secret[index] == secret[index]):
             emoji_result += GREEN_BOX  # When the characters at the same index match
             index += 1
-        elif contains_char (secret, guess_secret[index]):
+        elif contains_char(secret, guess_secret[index]):
             emoji_result += YELLOW_BOX  # When the character of secret guess appears in secret word
             index += 1
         else:
@@ -35,12 +38,14 @@ def emojified(guess_secret: str, secret: str) -> str:
             index += 1
     return emoji_result  # Return string of color emojis
 
-def input_guess (expected_length: int) -> str: 
+def input_guess(expected_length: int) -> str: 
     """Returns string of expected length from the user."""
     prompt_word_guess = input(f"Enter a {expected_length} character word: ")
     while (len(prompt_word_guess) != expected_length):
-        prompt_word_guess = input(f"That wasn't {expected_length} chars! Try again: ")  #Prompts user for a guess
+        prompt_word_guess = input(f"That wasn't {expected_length} chars! Try again: ")  
+        #Prompts user for a guess
     return prompt_word_guess  # String of expected length returns
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
@@ -59,6 +64,7 @@ def main() -> None:
             print(f"You won in {turn-1}/6 turns!")
     if not win:
         print("X/6 - Sorry, try again tomorrow!")  # User loss scenario
+
 
 if __name__ == "__main__":
     main()
