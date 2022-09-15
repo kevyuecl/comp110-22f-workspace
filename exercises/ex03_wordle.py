@@ -1,6 +1,6 @@
 """EX03- Sturcutred Wordle."""
 __author__ = "730559522"
-def contains_char (secret_word: str, secret_chr: str) -> bool:
+def contains_char(secret_word: str, secret_chr: str) -> bool:
     """Searches for present characters for strings of any length"""
     assert len(secret_chr) == 1
     index: int = 0  # Initialize index to 0
@@ -12,12 +12,14 @@ def contains_char (secret_word: str, secret_chr: str) -> bool:
     return False
     # While index is less than the length of the word, return true if the character is found at the index of the word and return false otherwise
 
+
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 # Initialization of f-strings with respect to their box colors 
-def emojified (guess_secret: str, secret: str) -> str:
-    """Returns emoji strings based on guess accuracy"""
+
+def emojified(guess_secret: str, secret: str) -> str:
+    """Returns emoji strings based on guess accuracy."""
     assert len(guess_secret) == len(secret)
     index: int = 0  # Initialize index to 0 
     emoji_result = ""
@@ -32,8 +34,9 @@ def emojified (guess_secret: str, secret: str) -> str:
             emoji_result += WHITE_BOX  # When the character does not appear in the word
             index += 1
     return emoji_result  # Return string of color emojis
+
 def input_guess (expected_length: int) -> str: 
-    """Returns string of expected length from the user"""
+    """Returns string of expected length from the user."""
     prompt_word_guess = input(f"Enter a {expected_length} character word: ")
     while (len(prompt_word_guess) != expected_length):
         prompt_word_guess = input(f"That wasn't {expected_length} chars! Try again: ")  #Prompts user for a guess
@@ -49,7 +52,7 @@ def main() -> None:
         print(f"=== Turn {turn}/6 ===")
         user_guess = input_guess(len(secret_word))  # User guess input assigned to guess
         print(emojified(user_guess, secret_word))  # Color emojis printed
-        turn += 1 # Turn increments by 1
+        turn += 1  # Turn increments by 1
 
         if (secret_word == user_guess):
             win = True  # User win scenario
@@ -57,18 +60,5 @@ def main() -> None:
     if not win:
         print("X/6 - Sorry, try again tomorrow!")  # User loss scenario
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
-
-
-        
-
-
-
-    
-
-
-
-
-
-
