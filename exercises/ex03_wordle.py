@@ -38,12 +38,12 @@ def emojified(guess_secret: str, secret: str) -> str:
             index += 1
     return emoji_result  # Return string of color emojis
 
+
 def input_guess(expected_length: int) -> str: 
     """Returns string of expected length from the user."""
     prompt_word_guess = input(f"Enter a {expected_length} character word: ")
     while (len(prompt_word_guess) != expected_length):
-        prompt_word_guess = input(f"That wasn't {expected_length} chars! Try again: ")  
-        #Prompts user for a guess
+        prompt_word_guess = input(f"That wasn't {expected_length} chars! Try again: ") # Prompts user for a guess
     return prompt_word_guess  # String of expected length returns
 
 
