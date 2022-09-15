@@ -46,7 +46,7 @@ def main() -> None:
     win: bool = False # If user guesses secret word right, this will become true. 
     while (turn < 7 and not win):
         print(f"=== Turn {turn}/6 ===")
-        guess = input_guess(len(secret_word)) # User guess input assigned to guess
+        user_guess = input_guess(len(secret_word)) # User guess input assigned to guess
         print(emojified(user_guess, secret_word)) # Color emojis printed
         turn += 1 # Turn increments by 1
 
