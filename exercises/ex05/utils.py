@@ -3,7 +3,7 @@ __author__ = "730559522"
 
 
 def only_evens(int_list: list[int]) -> list[int]:
-    """Returns only even integers from the input list."""
+    """Returns only even integers from the list."""
     i: int = 0
     even_num_list: list[int] = []
     while (i < len(int_list)):
