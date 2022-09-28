@@ -66,10 +66,3 @@ def test_sub_use2() -> None:
     start_index = 1
     end_index = 3
     assert sub(inputed_list, start_index, end_index) == [7, 3]
-
-
-
-
-
-
-
