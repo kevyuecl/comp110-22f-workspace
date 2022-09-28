@@ -42,6 +42,3 @@ def sub(inputed_list: list[int], start_index: int, end_index: int) -> list[int]:
         subset_list.append(inputed_list[start_index])
         start_index += 1
     return subset_list
-
-
-
