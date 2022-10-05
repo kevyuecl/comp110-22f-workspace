@@ -21,7 +21,7 @@ def main() -> None:
     supe_knowledge: bool = True
     while supe_knowledge:
         print(f"{player}'s total points: {points}")
-        select: str = input(f" \n 1. See how much you care about tactics. \n 2. See how much darkness you desire for intimidation. \n 3. Find more interest in superheroes \n: ")
+        select: str = input(f" \n 1. See how much you care about tactics. \n 2. See how much darkness you desire for intimidation {BAT}. \n 3. Find more interest in superheroes \n: ")
         if select == "1": 
             supes_tactic()
         elif select == "2":
