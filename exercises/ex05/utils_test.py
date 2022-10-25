@@ -1,4 +1,4 @@
-"""EX05- List Utility Functions (tests)."""
+"""EX05- List Utility Functions (tests version)."""
 __author__ = "730559522"
 
 

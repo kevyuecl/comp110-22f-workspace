@@ -41,8 +41,8 @@ def is_equal(first_list: list[int], second_list: list[int]) -> bool:
             if (first_list[ind] == second_list[ind]):
                 ind += 1
             else: 
-                return False # No deep equality
+                return False  # No deep equality
         return True
         # Deep equality
     return False
-        # List lengths are not the same, therefore no deep equality
+    # List lengths are not the same, therefore no deep equality
